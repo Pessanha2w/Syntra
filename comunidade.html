@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comunidade - Syntra</title>
+<link rel="stylesheet" href="comunidade.css">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+<header>
+
+<div class="nav-left">
+
+    <button class="lang-btn" onclick="setLang('pt')">Português</button>
+    <button class="lang-btn" onclick="setLang('en')">English</button>
+    <button class="lang-btn" onclick="setLang('es')">Español</button>
+
+    <a href="index.html" class="nav-btn">Syntra</a>
+    <a href="sobre.html" class="nav-btn">Sobre</a>
+    <a href="projeto.html" class="nav-btn">Projeto</a>
+    <a href="redes.html" class="nav-btn">Redes</a>
+</div>
+
+<div class="logo-top">SYNTRA</div>
+
+</header>
+
+<section class="section">
+
+<h1 id="title">Comunidade Syntra</h1>
+
+<p id="subtitle">
+Faça parte da nossa comunidade e acompanhe o crescimento da identidade digital unificada.
+</p>
+
+<form onsubmit="return fakeSubmit()">
+    <input type="text" id="name" placeholder="Seu Nome" required>
+    <input type="email" id="email" placeholder="Seu Email" required>
+    <textarea rows="4" id="message" placeholder="Mensagem (opcional)"></textarea>
+    <button class="submit-btn" type="submit" id="btnText">Entrar na Comunidade</button>
+</form>
+
+<div class="success" id="successMsg">
+Mensagem enviada com sucesso!
+</div>
+
+<!-- REDES -->
+<div class="social">
+
+    <a href="https://instagram.com" target="_blank">
+        <img src="instagram.png">
+    </a>
+
+    <a href="https://linkedin.com" target="_blank">
+        <img src="linkedin.png">
+    </a>
+
+    <a href="https://tiktok.com" target="_blank">
+        <img src="tiktok.png">
+    </a>
+
+    <a href="https://wa.me/seunumerodetelefone" target="_blank">
+        <img src="whatsapp.png">
+    </a>
+
+</div>
+
+</section>
+
+<script>
+
+function fakeSubmit(){
+
+    const name = document.getElementById("name").value;
+    const message = document.getElementById("message").value;
+
+    if(message.trim() !== ""){
+
+        let messages = JSON.parse(localStorage.getItem("syntraMessages")) || [];
+
+        messages.push({
+            nome: name,
+            mensagem: message
+        });
+
+        localStorage.setItem("syntraMessages", JSON.stringify(messages));
+    }
+
+    document.getElementById("successMsg").style.display = "block";
+
+    document.querySelector("form").reset();
+
+    return false;
+}
+
+function setLang(lang){
+
+if(lang === "en"){
+document.getElementById("title").innerText = "Syntra Community";
+document.getElementById("subtitle").innerText = "Join our community and follow the growth of unified digital identity.";
+document.getElementById("btnText").innerText = "Join the Community";
+}
+
+if(lang === "es"){
+document.getElementById("title").innerText = "Comunidad Syntra";
+document.getElementById("subtitle").innerText = "Forma parte de nuestra comunidad y acompaña el crecimiento de la identidad digital unificada.";
+document.getElementById("btnText").innerText = "Unirse a la Comunidad";
+}
+
+if(lang === "pt"){
+document.getElementById("title").innerText = "Comunidade Syntra";
+document.getElementById("subtitle").innerText = "Faça parte da nossa comunidade e acompanhe o crescimento da identidade digital unificada.";
+document.getElementById("btnText").innerText = "Entrar na Comunidade";
+}
+
+}
+
+</script>
+
+</body>
+</html>

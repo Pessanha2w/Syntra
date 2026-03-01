@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syntra</title>
+<link rel="stylesheet" href="redes.css">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+<header>
+
+<div class="nav-left">
+
+    <button class="lang-btn" onclick="setLang('pt')">Português</button>
+    <button class="lang-btn" onclick="setLang('en')">English</button>
+    <button class="lang-btn" onclick="setLang('es')">Español</button>
+
+    <a href="index.html" class="nav-btn">Syntra</a>
+    <a href="sobre.html" class="nav-btn">Sobre</a>
+    <a href="projeto.html" class="nav-btn">Projeto</a>
+    <a href="comunidade.html" class="nav-btn">Comunidade</a>
+
+</div>
+
+<div class="logo-top">SYNTRA</div>
+
+</header>
+
+<section class="section">
+
+<h1 id="title">Nossas Redes</h1>
+
+<p id="subtitle">
+Conecte-se com a Syntra em todas as plataformas.
+</p>
+
+<div class="social-grid">
+
+<a href="https://www.instagram.com/syntra.wrld/" target="_blank" class="social-card">
+    <img src="instagram.png">
+    <h3>Instagram</h3>
+    <span>@syntra</span>
+</a>
+
+<a href="https://www.linkedin.com/in/syntra-world-03a4723b3/" target="_blank" class="social-card">
+    <img src="linkedin.png">
+    <h3>LinkedIn</h3>
+    <span>Syntra Oficial</span>
+</a>
+
+<a href="https://www.tiktok.com/@syntra.wrld?lang=pt-BR" target="_blank" class="social-card">
+    <img src="tiktok.png">
+    <h3>TikTok</h3>
+    <span>@syntra</span>
+</a>
+
+<a href="https://wa.me/seunumerodetelefone" target="_blank" class="social-card">
+    <img src="whatsapp.png">
+    <h3>WhatsApp</h3>
+    <span>Fale Conosco</span>
+</a>
+
+</div>
+
+</section>
+
+<script>
+
+function setLang(lang){
+
+if(lang === "en"){
+document.getElementById("title").innerText = "Our Social Networks";
+document.getElementById("subtitle").innerText = "Connect with Syntra on all platforms.";
+}
+
+if(lang === "es"){
+document.getElementById("title").innerText = "Nuestras Redes";
+document.getElementById("subtitle").innerText = "Conéctate con Syntra en todas las plataformas.";
+}
+
+if(lang === "pt"){
+document.getElementById("title").innerText = "Nossas Redes";
+document.getElementById("subtitle").innerText = "Conecte-se com a Syntra em todas as plataformas.";
+}
+
+}
+
+</script>
+
+</body>
+</html>

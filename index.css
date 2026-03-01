@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+
+body{
+    background:#f5f5f3;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+.nav-left{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.lang-btn{
+    background:#2d5fbf;
+    color:white;
+    padding:6px 14px;
+    border-radius:20px;
+    border:none;
+    cursor:pointer;
+}
+
+.nav-btn{
+    background:#2d5fbf;
+    color:white;
+    padding:8px 20px;
+    border-radius:20px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.logo-top{
+    font-weight:800;
+    color:#2d5fbf;
+    font-size:22px;
+}
+
+/* HERO */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px 8%;
+}
+
+.text{
+    max-width:500px;
+}
+
+.small{
+    font-size:14px;
+    letter-spacing:2px;
+}
+
+h1{
+    font-size:60px;
+    margin:20px 0;
+}
+
+p{
+    margin-bottom:10px;
+    color:#333;
+}
+
+.hero img{
+    width:500px;
+}
+
+/* SOCIAL */
+
+.social{
+    margin-top:40px;
+    display:flex;
+    gap:15px;
+}
+
+.social img{
+    width:40px;
+    cursor:pointer;
+}
+
+/* FOOTER DOTS */
+
+.dots{
+    margin-top:20px;
+    display:flex;
+    gap:10px;
+}
+
+.dot{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    background:#2d5fbf;
+}
+
+.dot.active{
+    background:#2d5fbf;
+}

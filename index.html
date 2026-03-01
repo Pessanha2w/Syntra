@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syntra</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+</head>
+<body>
+
+<header>
+
+<div class="nav-left">
+    <button class="lang-btn" onclick="setLang('pt')">Português</button>
+    <button class="lang-btn" onclick="setLang('en')">English</button>
+    <button class="lang-btn" onclick="setLang('es')">Español</button>
+
+    <a href="sobre.html" class="nav-btn">Sobre</a>
+    <a href="projeto.html" class="nav-btn">Projeto</a>
+    <a href="redes.html" class="nav-btn">Redes</a>
+    <a href="comunidade.html" class="nav-btn">Comunidade</a>
+</div>
+
+<div class="logo-top">SYNTRA</div>
+
+</header>
+
+<section class="hero">
+
+<div class="text">
+
+<div class="small">SYNTRA</div>
+
+<h1 id="title">TUDO EM SÓ UM LUGAR</h1>
+
+<p id="line1">A internet fragmentou quem você é.</p>
+<p id="line2">A Syntra vem para unificar sua identidade digital em um só lugar.</p>
+<p id="line3">Presença, reputação e confiança conectadas.</p>
+<p id="line4">O futuro da identidade começa agora 🚀</p>
+
+<div class="dots">
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot active"></div>
+</div>
+
+<div class="social">
+    <!-- COLOQUE AQUI AS IMAGENS DOS ÍCONES -->
+    <a href="https://www.instagram.com/syntra.wrld/" target="_blank">
+        <img src="instagram.png">
+    </a>
+
+    <a href="https://www.linkedin.com/in/syntra-world-03a4723b3/" target="_blank">
+        <img src="linkedin.png">
+    </a>
+
+    <a href="https://www.tiktok.com/@syntra.wrld?lang=pt-BR" target="_blank">
+        <img src="tiktok.png">
+    </a>
+
+    <a href="https://wa.me/seunumerodetelefone" target="_blank">
+        <img src="whatsapp.png">
+    </a>
+</div>
+
+</div>
+
+<!-- IMAGEM GRANDE DA LOGO -->
+<img src="logo.png" alt="Logo Syntra">
+
+</section>
+
+<script>
+
+function setLang(lang){
+
+if(lang === "en"){
+document.getElementById("title").innerText = "EVERYTHING IN ONE PLACE";
+document.getElementById("line1").innerText = "The internet fragmented who you are.";
+document.getElementById("line2").innerText = "Syntra unifies your digital identity in one place.";
+document.getElementById("line3").innerText = "Presence, reputation and trust connected.";
+document.getElementById("line4").innerText = "The future of identity starts now 🚀";
+}
+
+if(lang === "es"){
+document.getElementById("title").innerText = "TODO EN UN SOLO LUGAR";
+document.getElementById("line1").innerText = "Internet fragmentó quién eres.";
+document.getElementById("line2").innerText = "Syntra unifica tu identidad digital en un solo lugar.";
+document.getElementById("line3").innerText = "Presencia, reputación y confianza conectadas.";
+document.getElementById("line4").innerText = "El futuro de la identidad comienza ahora 🚀";
+}
+
+if(lang === "pt"){
+document.getElementById("title").innerText = "TUDO EM SÓ UM LUGAR";
+document.getElementById("line1").innerText = "A internet fragmentou quem você é.";
+document.getElementById("line2").innerText = "A Syntra vem para unificar sua identidade digital em um só lugar.";
+document.getElementById("line3").innerText = "Presença, reputação e confiança conectadas.";
+document.getElementById("line4").innerText = "O futuro da identidade começa agora 🚀";
+}
+
+}
+
+</script>
+
+<section style="padding:60px 8%; background:#ffffff; margin-top:40px;">
+    <h2 style="margin-bottom:30px;">Mensagens da Comunidade</h2>
+    <div id="communityMessages"></div>
+</section>
+
+<script>
+
+function loadMessages(){
+
+    let messages = JSON.parse(localStorage.getItem("syntraMessages")) || [];
+
+    const container = document.getElementById("communityMessages");
+
+    container.innerHTML = "";
+
+    messages.forEach(msg => {
+
+        const box = document.createElement("div");
+        box.style.marginBottom = "20px";
+        box.style.padding = "15px";
+        box.style.background = "#f5f5f3";
+        box.style.borderRadius = "10px";
+
+        box.innerHTML = "<strong>" + msg.nome + "</strong><br>" + msg.mensagem;
+
+        container.appendChild(box);
+
+    });
+}
+
+loadMessages();
+
+</script>
+
+</body>
+</html>

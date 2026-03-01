@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syntra</title>
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="sobre.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+
+<div class="nav-left">
+
+    <button class="lang-btn" onclick="setLang('pt')">Português</button>
+    <button class="lang-btn" onclick="setLang('en')">English</button>
+    <button class="lang-btn" onclick="setLang('es')">Español</button>
+
+    <!-- ROTAS ENTRE PÁGINAS -->
+    <a href="index.html" class="nav-btn">Syntra</a>
+    <a href="projeto.html" class="nav-btn">Projeto</a>
+    <a href="redes.html" class="nav-btn">Redes</a>
+    <a href="comunidade.html" class="nav-btn">Comunidade</a>
+
+</div>
+
+<div class="logo-top">SYNTRA</div>
+
+</header>
+
+<section class="section">
+
+<h1 id="title">Sobre a Syntra</h1>
+
+<p id="text1">
+A Syntra nasceu com a missão de unificar a identidade digital em um único lugar.
+</p>
+
+<p id="text2">
+Vivemos em um mundo onde nossa presença online está espalhada em várias plataformas.
+</p>
+
+<p id="text3">
+Nosso objetivo é conectar reputação, confiança e presença digital de forma simples, segura e moderna.
+</p>
+
+<p id="text4">
+Estamos construindo o futuro da identidade digital global.
+</p>
+
+<!-- REDES SOCIAIS -->
+<div class="social">
+
+    <a href="https://www.instagram.com/syntra.wrld/" target="_blank">
+        <img src="instagram.png">
+    </a>
+
+    <a href="https://www.linkedin.com/in/syntra-world-03a4723b3/" target="_blank">
+        <img src="linkedin.png">
+    </a>
+
+    <a href="https://www.tiktok.com/@syntra.wrld?lang=pt-BR" target="_blank">
+        <img src="tiktok.png">
+    </a>
+
+    <a href="https://wa.me/seunumerodetelefone" target="_blank">
+        <img src="whatsapp.png">
+    </a>
+
+</div>
+
+</section>
+
+<script>
+
+function setLang(lang){
+
+if(lang === "en"){
+document.getElementById("title").innerText = "About Syntra";
+document.getElementById("text1").innerText = "Syntra was created to unify digital identity in one place.";
+document.getElementById("text2").innerText = "Today our online presence is fragmented across multiple platforms.";
+document.getElementById("text3").innerText = "Our goal is to connect reputation, trust and digital presence in a simple and secure way.";
+document.getElementById("text4").innerText = "We are building the future of global digital identity.";
+}
+
+if(lang === "es"){
+document.getElementById("title").innerText = "Sobre Syntra";
+document.getElementById("text1").innerText = "Syntra nació con la misión de unificar la identidad digital en un solo lugar.";
+document.getElementById("text2").innerText = "Nuestra presencia online está fragmentada en múltiples plataformas.";
+document.getElementById("text3").innerText = "Nuestro objetivo es conectar reputación, confianza y presencia digital.";
+document.getElementById("text4").innerText = "Estamos construyendo el futuro de la identidad digital global.";
+}
+
+if(lang === "pt"){
+document.getElementById("title").innerText = "Sobre a Syntra";
+document.getElementById("text1").innerText = "A Syntra nasceu com a missão de unificar a identidade digital em um único lugar.";
+document.getElementById("text2").innerText = "Vivemos em um mundo onde nossa presença online está espalhada em várias plataformas.";
+document.getElementById("text3").innerText = "Nosso objetivo é conectar reputação, confiança e presença digital de forma simples, segura e moderna.";
+document.getElementById("text4").innerText = "Estamos construindo o futuro da identidade digital global.";
+}
+
+}
+
+</script>
+
+</body>
+</html>

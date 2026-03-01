@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syntra</title>
+<link rel="stylesheet" href="projeto.css">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+<header>
+
+<div class="nav-left">
+
+    <button class="lang-btn" onclick="setLang('pt')">Português</button>
+    <button class="lang-btn" onclick="setLang('en')">English</button>
+    <button class="lang-btn" onclick="setLang('es')">Español</button>
+
+    <a href="index.html" class="nav-btn">Syntra</a>
+    <a href="sobre.html" class="nav-btn">Sobre</a>
+    <a href="redes.html" class="nav-btn">Redes</a>
+    <a href="comunidade.html" class="nav-btn">Comunidade</a>
+
+</div>
+
+<div class="logo-top">SYNTRA</div>
+
+</header>
+
+<section class="section">
+
+<h1 id="title">O Projeto Syntra</h1>
+
+<h2 id="h1">Como surgiu a ideia</h2>
+<p id="p1">
+A ideia surgiu ao perceber que nossa identidade digital está espalhada por várias plataformas. 
+Temos Instagram, LinkedIn, TikTok, WhatsApp e muitos outros perfis. 
+Cada um mostra apenas uma parte de quem somos.
+</p>
+
+<p id="p2">
+Isso acaba fragmentando nossa presença online. 
+Quem quer conhecer nosso trabalho ou nossa reputação precisa procurar em vários lugares diferentes.
+</p>
+
+<h2 id="h2">Qual problema queremos resolver</h2>
+<p id="p3">
+Hoje é difícil reunir em um único local tudo o que representa você no mundo digital.
+Empresas, profissionais e criadores de conteúdo precisam de credibilidade, mas essa confiança fica espalhada.
+</p>
+
+<p id="p4">
+A Syntra nasce para resolver isso: unir identidade, reputação e presença digital em um só lugar.
+</p>
+
+<h2 id="h3">Como vai funcionar</h2>
+<p id="p5">
+O usuário poderá conectar suas redes sociais e informações principais dentro da plataforma.
+Assim, ao invés de enviar vários links diferentes, ele terá apenas um perfil centralizado.
+</p>
+
+<p id="p6">
+Esse perfil mostrará suas redes, projetos, reputação, informações profissionais e tudo o que for relevante.
+Tudo de forma organizada, simples e acessível.
+</p>
+
+<p id="p7">
+A ideia é facilitar conexões, aumentar confiança e tornar a identidade digital mais clara para todos.
+</p>
+
+<h2 id="h4">Nosso objetivo</h2>
+<p id="p8">
+Construir uma plataforma global que simplifique a vida digital das pessoas,
+unindo tudo o que importa em um único espaço confiável.
+</p>
+
+<!-- REDES SOCIAIS -->
+<div class="social">
+
+    <a href="https://www.instagram.com/syntra.wrld/" target="_blank">
+        <img src="instagram.png">
+    </a>
+
+    <a href="https://www.linkedin.com/in/syntra-world-03a4723b3/" target="_blank">
+        <img src="linkedin.png">
+    </a>
+
+    <a href="https://www.tiktok.com/@syntra.wrld?lang=pt-BR" target="_blank">
+        <img src="tiktok.png">
+    </a>
+
+    <a href="https://wa.me/seunumerodetelefone" target="_blank">
+        <img src="whatsapp.png">
+    </a>
+
+</div>
+
+</section>
+
+<script>
+
+function setLang(lang){
+
+if(lang === "en"){
+document.getElementById("title").innerText = "The Syntra Project";
+document.getElementById("h1").innerText = "How the idea started";
+document.getElementById("p1").innerText = "The idea came from noticing that our digital identity is spread across many platforms.";
+document.getElementById("p2").innerText = "Anyone who wants to know about us needs to search in multiple places.";
+document.getElementById("h2").innerText = "The problem we solve";
+document.getElementById("p3").innerText = "Today it is hard to gather everything that represents you in one place.";
+document.getElementById("p4").innerText = "Syntra was created to unify identity, reputation and digital presence.";
+document.getElementById("h3").innerText = "How it will work";
+document.getElementById("p5").innerText = "Users will connect their social networks into one central profile.";
+document.getElementById("p6").innerText = "Instead of sharing many links, they will share only one.";
+document.getElementById("p7").innerText = "The platform will organize everything clearly and simply.";
+document.getElementById("h4").innerText = "Our goal";
+document.getElementById("p8").innerText = "To build a global platform that simplifies digital life.";
+}
+
+if(lang === "es"){
+document.getElementById("title").innerText = "El Proyecto Syntra";
+document.getElementById("h1").innerText = "Cómo surgió la idea";
+document.getElementById("p1").innerText = "La idea surgió al notar que nuestra identidad digital está dispersa.";
+document.getElementById("p2").innerText = "Quien quiera conocernos debe buscar en muchos lugares.";
+document.getElementById("h2").innerText = "El problema que resolvemos";
+document.getElementById("p3").innerText = "Es difícil reunir todo lo que te representa en un solo lugar.";
+document.getElementById("p4").innerText = "Syntra unifica identidad, reputación y presencia digital.";
+document.getElementById("h3").innerText = "Cómo funcionará";
+document.getElementById("p5").innerText = "Los usuarios conectarán sus redes en un perfil central.";
+document.getElementById("p6").innerText = "En vez de compartir muchos enlaces, compartirán uno solo.";
+document.getElementById("p7").innerText = "Todo estará organizado de forma clara y simple.";
+document.getElementById("h4").innerText = "Nuestro objetivo";
+document.getElementById("p8").innerText = "Construir una plataforma global que simplifique la vida digital.";
+}
+
+if(lang === "pt"){
+document.getElementById("title").innerText = "O Projeto Syntra";
+}
+
+}
+
+</script>
+
+</body>
+</html>
