@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 *{
     margin:0;
     padding:0;
@@ -11,6 +10,11 @@
 body{
     background:#f5f5f3;
     overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    height:auto;
 }
 
 /* HEADER */
@@ -59,6 +63,7 @@ header{
     justify-content:space-between;
     align-items:center;
     padding:60px 8%;
+    gap:40px;
 }
 
 .text{
@@ -81,7 +86,8 @@ p{
 }
 
 .hero img{
-    width:500px;
+    width:100%;
+    max-width:500px;
 }
 
 /* SOCIAL */
@@ -114,4 +120,72 @@ p{
 
 .dot.active{
     background:#2d5fbf;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media (max-width:1024px){
+
+    h1{
+        font-size:46px;
+    }
+
+    .hero img{
+        max-width:420px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    header{
+        padding:20px;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:40px 20px;
+    }
+
+    .text{
+        max-width:100%;
+    }
+
+    h1{
+        font-size:36px;
+    }
+
+    .hero img{
+        max-width:350px;
+    }
+
+    .social{
+        justify-content:center;
+    }
+
+}
+
+@media (max-width:480px){
+
+    h1{
+        font-size:30px;
+    }
+
+    .hero{
+        gap:30px;
+    }
+
+    .nav-btn{
+        font-size:12px;
+        padding:6px 16px;
+    }
+
+    .lang-btn{
+        padding:5px 12px;
+        font-size:12px;
+    }
+
 }
