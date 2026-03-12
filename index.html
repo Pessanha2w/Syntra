@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt">
 
 <head>
@@ -8,19 +8,183 @@
 
 <title>Syntra</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="index.css">
-<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" href="favicon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#f5f5f3;
+color:#222;
+}
+
+/* HERO */
+
+.hero{
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+padding:80px 20px;
+
+}
+
+.small{
+
+letter-spacing:3px;
+font-size:14px;
+color:#2d5fbf;
+
+}
+
+h1{
+
+font-size:56px;
+margin:20px 0;
+
+}
+
+.hero p{
+
+max-width:600px;
+margin-bottom:8px;
+
+}
+
+.logo{
+
+margin-top:40px;
+width:180px;
+
+}
+
+/* BOTÕES */
+
+.nav-area{
+
+margin-top:50px;
+
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+
+justify-content:center;
+
+}
+
+.page-btn{
+
+background:#2d5fbf;
+
+color:white;
+
+padding:14px 32px;
+
+border-radius:30px;
+
+text-decoration:none;
+
+font-weight:500;
+
+transition:0.25s;
+
+}
+
+.page-btn:hover{
+
+transform:scale(1.05);
+
+}
+
+/* SOCIAL */
+
+.social{
+
+margin-top:35px;
+
+display:flex;
+
+gap:18px;
+
+justify-content:center;
+
+}
+
+.social img{
+
+width:40px;
+
+}
+
+/* COMUNIDADE */
+
+.community{
+
+margin-top:80px;
+
+padding:60px 20px;
+
+background:white;
+
+}
+
+.community h2{
+
+margin-bottom:30px;
+
+text-align:center;
+
+}
+
+.message{
+
+background:#f5f5f3;
+
+padding:15px;
+
+border-radius:10px;
+
+margin-bottom:15px;
+
+max-width:700px;
+
+margin-left:auto;
+margin-right:auto;
+
+}
+
+/* RESPONSIVO */
+
+@media (max-width:700px){
+
+h1{
+font-size:36px;
+}
+
+.logo{
+width:140px;
+}
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<header></header>
-
 <section class="hero">
-
-<div class="text">
 
 <div class="small">SYNTRA</div>
 
@@ -30,6 +194,20 @@
 <p id="line2">A Syntra vem para unificar sua identidade digital em um só lugar.</p>
 <p id="line3">Presença, reputação e confiança conectadas.</p>
 <p id="line4">O futuro da identidade começa agora 🚀</p>
+
+<img src="logo.png" class="logo">
+
+<div class="nav-area">
+
+<a href="sobre.html" class="page-btn">Sobre</a>
+
+<a href="projeto.html" class="page-btn">Projeto</a>
+
+<a href="redes.html" class="page-btn">Redes</a>
+
+<a href="comunidade.html" class="page-btn">Comunidade</a>
+
+</div>
 
 <div class="social">
 
@@ -51,69 +229,15 @@
 
 </div>
 
-</div>
-
-<img src="logo.png" alt="Logo Syntra">
-
 </section>
 
+<section class="community">
 
-<!-- BOTÕES DE NAVEGAÇÃO -->
-
-<section class="nav-area">
-
-<a href="sobre.html" class="page-btn">Sobre</a>
-
-<a href="projeto.html" class="page-btn">Projeto</a>
-
-<a href="redes.html" class="page-btn">Redes</a>
-
-<a href="comunidade.html" class="page-btn">Comunidade</a>
-
-</section>
-
-
-<section style="padding:60px 8%; background:#ffffff; margin-top:40px;">
-
-<h2 style="margin-bottom:30px;">Mensagens da Comunidade</h2>
+<h2>Mensagens da Comunidade</h2>
 
 <div id="communityMessages"></div>
 
 </section>
-
-
-<script>
-
-function setLang(lang){
-
-if(lang === "en"){
-document.getElementById("title").innerText = "EVERYTHING IN ONE PLACE";
-document.getElementById("line1").innerText = "The internet fragmented who you are.";
-document.getElementById("line2").innerText = "Syntra unifies your digital identity in one place.";
-document.getElementById("line3").innerText = "Presence, reputation and trust connected.";
-document.getElementById("line4").innerText = "The future of identity starts now 🚀";
-}
-
-if(lang === "es"){
-document.getElementById("title").innerText = "TODO EN UN SOLO LUGAR";
-document.getElementById("line1").innerText = "Internet fragmentó quién eres.";
-document.getElementById("line2").innerText = "Syntra unifica tu identidad digital en un solo lugar.";
-document.getElementById("line3").innerText = "Presencia, reputación y confianza conectadas.";
-document.getElementById("line4").innerText = "El futuro de la identidad comienza ahora 🚀";
-}
-
-if(lang === "pt"){
-document.getElementById("title").innerText = "TUDO EM SÓ UM LUGAR";
-document.getElementById("line1").innerText = "A internet fragmentou quem você é.";
-document.getElementById("line2").innerText = "A Syntra vem para unificar sua identidade digital em um só lugar.";
-document.getElementById("line3").innerText = "Presença, reputação e confiança conectadas.";
-document.getElementById("line4").innerText = "O futuro da identidade começa agora 🚀";
-}
-
-}
-
-</script>
-
 
 <script>
 
@@ -123,18 +247,15 @@ let messages = JSON.parse(localStorage.getItem("syntraMessages")) || [];
 
 const container = document.getElementById("communityMessages");
 
-container.innerHTML = "";
+container.innerHTML="";
 
-messages.forEach(msg => {
+messages.forEach(msg=>{
 
-const box = document.createElement("div");
+const box=document.createElement("div");
 
-box.style.marginBottom = "20px";
-box.style.padding = "15px";
-box.style.background = "#f5f5f3";
-box.style.borderRadius = "10px";
+box.className="message";
 
-box.innerHTML = "<strong>" + msg.nome + "</strong><br>" + msg.mensagem;
+box.innerHTML="<strong>"+msg.nome+"</strong><br>"+msg.mensagem;
 
 container.appendChild(box);
 
